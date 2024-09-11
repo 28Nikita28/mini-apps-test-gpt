@@ -1,0 +1,128 @@
+body {
+    font-family: Open Sans, sans-serif;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header {
+    background-color: var(--header-background-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--header-text-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+main {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--main-background-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#chat-log {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--main-border-color);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#send-btn {
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#send-btn:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid var(--message-border-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.user-message {
+    background-color: var(--user-message-background-color);
+    padding-left: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ai-message {
+    background-color: var(--ai-message-background-color);
+    padding-right: 20px;
+    text-align: right;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Светлая тема */
+.light-theme {
+    --background-color: #f7f7f7;
+    --header-background-color: #ffffff;
+    --header-text-color: #0f0f0f;
+    --main-background-color: #fff;
+    --main-border-color: #ddd;
+    --input-background-color: #fff;
+    --input-border-color: #ccc;
+    --input-text-color: #000;
+    --button-background-color: #e7e5e5;
+    --button-text-color: #161616;
+    --button-hover-background-color: #fcf9f9;
+    --message-border-color: #ccc;
+    --user-message-background-color: #f7f7f7;
+    --ai-message-background-color: #0b0c0c;
+}
+
+/* Темная тема */
+.dark-theme {
+    --background-color: #121212;
+    --header-background-color: #1c1c1c;
+    --header-text-color: #e0e0e0;
+    --main-background-color: #1e1e1e;
+    --main-border-color: #333;
+    --input-background-color: #2c2c2c;
+    --input-border-color: #555;
+    --input-text-color: #e0e0e0;
+    --button-background-color: #2a292b;
+    --button-text-color: #fff;
+    --button-hover-background-color: #030303;
+    --message-border-color: #444;
+    --user-message-background-color: #333;
+    --ai-message-background-color: #444;
+}
